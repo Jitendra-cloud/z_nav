@@ -1,5 +1,14 @@
-<mvc:View controllerName="djp.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-    
-    <Button text="Say Hello" width="50%" press=".onSayHello"/>
-
+<mvc:View
+    controllerName="djp.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+>
+    <Shell>
+        <App>
+            <pages>
+                <mvc:XMLView viewName="djp.view.Overview" />
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>

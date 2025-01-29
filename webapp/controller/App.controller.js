@@ -7,9 +7,6 @@ sap.ui.define([
   
       return Controller.extend("djp.controller.App", {
   
-        onSayHello: function () {
-          MessageBox.information("Hello World");
-        }
   
       });
     });
