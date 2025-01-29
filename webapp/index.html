@@ -16,11 +16,16 @@
         data-sap-ui-theme="sap_fiori_3"
         data-sap-ui-compatVersion="edge"
         data-sap-ui-async="true"
-        data-sap-ui-onInit="module:djp/index"
+        data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
         data-sap-ui-resourceroots='{"djp": "./"}'
     ></script>
 </head>
 <body class="sapUiBody" id="content">
-
+    <div
+        data-sap-ui-component
+        data-id="container"
+        data-name="djp"
+        data-settings='{"id" : "djp"}'
+    ></div>
 </body>
 </html>
