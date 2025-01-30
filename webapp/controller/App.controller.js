@@ -10,6 +10,10 @@ sap.ui.define([
         // onSayHello: function () {
         //   MessageBox.information("Hello World");
         // }
+
+        onInit: function () {
+          this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+        }
   
       });
     });

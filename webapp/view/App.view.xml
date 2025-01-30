@@ -6,7 +6,7 @@
     
 <!--Button text="Say Hello" press=".onSayHello"/-->
     
-    <Shell backgroundColor="#666666" showLogout="true" appWidthLimited="false" >
+    <Shell>
         <App>
             <pages>
                 <mvc:XMLView viewName="djp.view.Overview" />
