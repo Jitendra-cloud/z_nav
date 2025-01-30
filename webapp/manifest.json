@@ -102,6 +102,7 @@
             "type": "XML",
             "async": true,
             "id": "App"
-        }
+        },
+        "handleValidation": true
     }
 }
