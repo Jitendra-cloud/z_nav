@@ -35,14 +35,11 @@
                             <Input value="" />
                             <Label text="Country" />
                             <Input value="" />
-
                             <core:Title text="Contact Data" />
                             <Label text="Email" />
-
                             <Input value="" />
                             <Label text="Telephone" />
                             <Input value="" />
-
                         </f:content>
                     </f:SimpleForm>
                 </content>
