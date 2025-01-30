@@ -1,11 +1,7 @@
-<mvc:View
-    controllerName="djp.controller.Overview"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns:f="sap.ui.layout.form"
-    xmlns:core="sap.ui.core"
-    xmlns="sap.m"
->
+<mvc:View controllerName="djp.controller.Overview" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m" >
+    
     <Page title="Flight Customers">
+
         <content>
             <Panel headerText="New Customer" expandable="true" expanded="true" 
                    class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" >
@@ -33,7 +29,7 @@
                     </f:SimpleForm>
                 </content>
             </Panel>
-            <Table headerText="Customers" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{/Customersa}">
+            <Table headerText="Customers" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{/Customersa}" mode="SingleSelectLeft" selectionChange=".onCustomerChange">
                 <columns>
                     <Column><header><Text text="Customer Name"/></header></Column>
                     <Column><header><Text text="Street"/></header></Column>
@@ -57,6 +53,29 @@
                     </ColumnListItem>
                 </items>
             </Table>
+            <Table id="bookingTable" headerText="Bookings" items="{_Bookings}" growing="true" growingThreshold="5" class="sapUiResponsiveMargin" width="auto">
+                <columns>
+                    <Column><header><Text text="Airline ID"/></header></Column>
+                    <Column><header><Text text="Connection Number"/></header></Column>
+                    <Column><header><Text text="Flight Date"/></header></Column>
+                    <Column><header><Text text="Class"/></header></Column>
+                    <Column><header><Text text="Foreign Currency Payment"/></header></Column>
+                    <Column><header><Text text="Cancellation Status"/></header></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                    <cells>
+                        <ObjectIdentifier title="{AirlineID}"/>
+                        <ObjectIdentifier title="{ConnectionNumber}"/> 
+                        <ObjectIdentifier title="{FlightDate}"/>
+                        <Text text="{Class}"/>
+                        <ObjectNumber number="{ForeignCurrencyPayment}" unit="{ForeignCurrency}"/>
+                        <Text text="{IsCancelled}"/>
+                    </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
         </content>
+
     </Page>
 </mvc:View>

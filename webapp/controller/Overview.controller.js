@@ -26,7 +26,12 @@ sap.ui.define([
                 }
                 this.pDialog.then(function (oDialog) { oDialog.open(); }); },
 
-            onCloseDialog: function () { this.byId("dialog").close(); }
+            onCloseDialog: function () { this.byId("dialog").close(); },
+
+            onCustomerChange: function (oEvent) {
+                var oBindingContext = oEvent.getParameter("listItem").getBindingContext();
+                this.byId("bookingTable").setBindingContext(oBindingContext);
+              }
 
         });
     });
