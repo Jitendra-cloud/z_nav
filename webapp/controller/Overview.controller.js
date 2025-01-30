@@ -9,7 +9,7 @@ sap.ui.define([
     function (Controller, syncStyleClass, JSONModel) {
         "use strict";
 
-        return Controller.extend("sap.training.exc.controller.Overview", {
+        return Controller.extend("djp.controller.Overview", {
 
             onInit: function () {
                 var oModel = new JSONModel();
