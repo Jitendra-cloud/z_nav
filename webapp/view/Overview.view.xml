@@ -9,7 +9,7 @@
         <content>
             <Panel headerText="New Customer" expandable="true" expanded="true" >
                 <content>
-                    <f:SimpleForm layout="ColumnLayout" editable="true" >
+                    <f:SimpleForm layout="ResponsiveGridLayout" editable="true" >
                         <f:toolbar>
                             <Toolbar>
                                 <content>

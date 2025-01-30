@@ -1,12 +1,15 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/m/MessageBox"
+    "sap/ui/core/mvc/Controller"
+    //,"sap/m/MessageBox"
   ],
-    function (Controller, MessageBox) {
+    function (Controller) {
       "use strict";
   
       return Controller.extend("djp.controller.App", {
   
+        // onSayHello: function () {
+        //   MessageBox.information("Hello World");
+        // }
   
       });
     });

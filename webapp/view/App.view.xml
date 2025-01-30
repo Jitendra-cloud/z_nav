@@ -2,8 +2,10 @@
     controllerName="djp.controller.App"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    displayBlock="true"
->
+    displayBlock="true" >
+    
+<!--Button text="Say Hello" press=".onSayHello"/-->
+    
     <Shell>
         <App>
             <pages>
@@ -11,4 +13,5 @@
             </pages>
         </App>
     </Shell>
+
 </mvc:View>
