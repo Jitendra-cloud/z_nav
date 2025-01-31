@@ -10,17 +10,26 @@ sap.ui.define([
 
         return Controller.extend("djp.controller.Detail", {
 
-            onNavBack: function () {
-                var oHistory = History.getInstance();
-                var sPreviousHash = oHistory.getPreviousHash();
-              
-                if (sPreviousHash !== undefined) {
-                  window.history.go(-1);
-                } else {
-                  var oRouter = this.getOwnerComponent().getRouter();
-                  oRouter.navTo("overview", {}, true);
-                }
-              }
+          onInit: function () {
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+          },
+
+          _onObjectMatched: function (oEvent) {
+            this.getView().bindElement("/UX_Customer" + oEvent.getParameter("arguments").customerId);
+          },
+
+          onNavBack: function () {
+            var oHistory = History.getInstance();
+            var sPreviousHash = oHistory.getPreviousHash();
+          
+            if (sPreviousHash !== undefined) {
+              window.history.go(-1);
+            } else {
+              var oRouter = this.getOwnerComponent().getRouter();
+              oRouter.navTo("overview", {}, true);
+            }
+          }
 
 
         });
