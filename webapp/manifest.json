@@ -91,10 +91,14 @@
                 "async": true,
                 "viewPath": "djp.view",
                 "controlAggregation": "pages",
-                "controlId": "<...>"
+                "controlId": "app"
             },
-            "routes": [],
-            "targets": {}
+            "routes": [{ "name": "overview",
+                          "pattern": "",
+                          "target": [ "overview" ] }],
+            "targets": { "overview": { "viewId": "overview",
+                                       "viewName": "Overview",
+                                        "viewLevel": 1}  }
         },
         "rootView": {
             "viewName": "djp.view.App",

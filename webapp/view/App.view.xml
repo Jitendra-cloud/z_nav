@@ -7,11 +7,14 @@
 <!--Button text="Say Hello" press=".onSayHello"/-->
     
     <Shell>
-        <App>
-            <pages>
+        <!--App>
+            <<pages>
                 <mvc:XMLView viewName="djp.view.Overview" />
             </pages>
-        </App>
+        </App -->
+
+        <App id="app" />
+
     </Shell>
 
 </mvc:View>
