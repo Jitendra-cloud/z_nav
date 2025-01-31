@@ -9,6 +9,10 @@ sap.ui.define([
 
         return Controller.extend("djp.controller.NotFound", {
 
+            onNavToOverview: function () {
+                var oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("overview", {}, true);
+              }
 
         });
     });
