@@ -69,16 +69,13 @@
                                 "bundleName": "djp.i18n.i18n",
                                 "supportedLocales": [""],
                                 "fallbackLocale": "" } },
-            "ODataModel": {
-                "dataSource": "<...>",
+            "": {
+                "dataSource": "mainService",
                 "settings": {
                     "synchronizationMode": "None",
                     "operationMode": "Server",
                     "autoExpandSelect": true,
-                    "earlyRequests": true } },
-            "": {
-            "type": "sap.ui.model.json.JSONModel",
-            "uri": "model/data.json" }
+                    "earlyRequests": true } }
         },
         "resources": {
             "css": [

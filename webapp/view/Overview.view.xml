@@ -33,10 +33,10 @@
                 </content>
             </Panel>
             <!--Table headerText="Customers" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{/Customersa}" mode="SingleSelectLeft" selectionChange=".onCustomerChange"-->
-            <Table id="customerTable" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{   path: '/Customers',
-                                                                                                                                    sorter: [   {path: 'City', group: true},
+            <Table id="customerTable" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{   path: '/UX_Customer',
+                                                                                                                                sorter: [   {path: 'City', group: true},
                                                                                                                                                 {path: 'CustomerName'} ]}" 
-                                                                                                                         mode="SingleSelectLeft" selectionChange=".onCustomerChange">
+                                                                                                                     mode="SingleSelectLeft" selectionChange=".onCustomerChange">
                 <headerToolbar>
                     <Toolbar>
                         <Title text="{i18n>customerTableHeader}"/>
