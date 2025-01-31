@@ -2,9 +2,6 @@
           core:require="{formatter: 'djp/model/formatter'}"  >
     
     <Page title="Flight Customers">
-
-        <content> </content>
-
         <content>
             <Panel headerText="New Customer" expandable="true" expanded="true" 
                    class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" >
@@ -14,13 +11,14 @@
                             <Toolbar>
                                 <content>
                                     <ToolbarSpacer />
-                                    <Button icon="sap-icon://create" text="Create Customer" press=".onSave" />
+                                    <Button icon="sap-icon://create" text="Create Customer" press=".onSave" 
+                                            enabled="{= ${customer>/CustomerName} !== undefined &amp;&amp; ${customer>/CustomerName}.length > 0 }" />
                                 </content>
                             </Toolbar>
                         </f:toolbar>
                         <f:content>
                             <core:Title text="General Data" />  <Label text="Form" />           <Input value="{customer>/Form}" />
-                                                                <Label text="Customer Name" />  <Input value="{customer>/CustomerName}" />
+                                                                <Label text="Customer Name" />  <Input value="{customer>/CustomerName}" valueLiveUpdate="true" />
                                                                 <Label text="Discount" />       <Input value="{ path: 'customer>/Discount',
                                                                                                                 type: 'sap.ui.model.type.Integer',
                                                                                                                 constraints: {minimum: 0, maximum: 100} }" />
@@ -35,7 +33,7 @@
                 </content>
             </Panel>
             <!--Table headerText="Customers" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{/Customersa}" mode="SingleSelectLeft" selectionChange=".onCustomerChange"-->
-            <Table id="customerTable" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{   path: '/Customersa',
+            <Table id="customerTable" growing="true" growingThreshold="4" class="sapUiResponsiveMargin" width="auto" items="{   path: '/Customers',
                                                                                                                                     sorter: [   {path: 'City', group: true},
                                                                                                                                                 {path: 'CustomerName'} ]}" 
                                                                                                                          mode="SingleSelectLeft" selectionChange=".onCustomerChange">
@@ -97,7 +95,9 @@
                                                 type: 'sap.ui.model.type.Currency',
                                                 formatOptions: {showMeasure: false} }"
                                       unit="{ForeignCurrency}"/>
-                        <Text text="{IsCancelled}"/>
+                        <!--Text text="{IsCancelled}"/-->
+                        <core:Icon src="{= ${IsCancelled} === 'X' ? 'sap-icon://cancel' : 'sap-icon://accept' }"
+                                   tooltip="{= ${IsCancelled} === 'X' ? 'cancelled' : 'not cancelled' }"/>
                     </cells>
                     </ColumnListItem>
                 </items>
