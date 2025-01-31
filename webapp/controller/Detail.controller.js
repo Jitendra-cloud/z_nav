@@ -7,7 +7,7 @@ sap.ui.define([
     function (Controller) {
         "use strict";
 
-        return Controller.extend("sap.training.exc.controller.Detail", {
+        return Controller.extend("djp.controller.Detail", {
 
 
 

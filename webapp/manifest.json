@@ -93,12 +93,30 @@
                 "controlAggregation": "pages",
                 "controlId": "app"
             },
-            "routes": [{ "name": "overview",
-                          "pattern": "",
-                          "target": [ "overview" ] }],
-            "targets": { "overview": { "viewId": "overview",
-                                       "viewName": "Overview",
-                                        "viewLevel": 1}  }
+            "routes": [
+                {
+                    "name": "overview",
+                    "pattern": "",
+                    "target": ["overview"]
+                },
+                {
+                    "name": "detail",
+                    "pattern": "detail",
+                    "target": ["detail"]
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "viewId": "overview",
+                    "viewName": "Overview",
+                    "viewLevel": 1
+                },
+                "detail": {
+                    "viewId": "detail",
+                    "viewName": "Detail",
+                    "viewLevel": 2
+                }
+            }
         },
         "rootView": {
             "viewName": "djp.view.App",

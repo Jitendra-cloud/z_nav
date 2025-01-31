@@ -1,4 +1,4 @@
-<mvc:View controllerName="sap.training.exc.controller.NotFound"
+<mvc:View controllerName="djp.controller.NotFound"
           xmlns:mvc="sap.ui.core.mvc"
           xmlns="sap.m">
 
